@@ -23,4 +23,4 @@ npm run dev
 ```
 
 
-<img src="/pictures/architecture.png" title="architecture"  width="900">
+<img src="/pictures/init.png" title="architecture"  width="900">

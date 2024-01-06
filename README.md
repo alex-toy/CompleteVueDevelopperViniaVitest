@@ -2,7 +2,7 @@
 
 - File Uploads, Testing, PWAs, Internationalization, Authentication with Vue 3
 - TailwindCSS, Sass, CSS Animations and Transitions
-- Pinia (the new replacement for Vuex) for state management in your applications
+- Pinia (the new replacement for Vuex) for state management in applications
 - Compare tradeoffs when it comes to performance and scalability
 - Set up authentication and user accounts
 - Firebase to build full stack applications

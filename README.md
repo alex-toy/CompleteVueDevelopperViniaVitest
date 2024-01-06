@@ -13,13 +13,14 @@
 - Using the latest ES6/ES7/ES8/ES9/ES10/ES11 JavaScript to write clean code
 
 
-## General architecture
+## Get started
+
+### Create and run project
+```
+npm create vue@latest
+npm i
+npm run dev
+```
+
+
 <img src="/pictures/architecture.png" title="architecture"  width="900">
-
-
-## Auction MicroService
-
-### Nuget Packages
-```
-```
-

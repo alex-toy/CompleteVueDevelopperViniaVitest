@@ -1,8 +1,14 @@
 <template>
     <section>
       <h2>My Friends</h2>
+      <p v-html="raw_html"></p>
       <ul>
-        <friend-contact v-for="friend in friends" :key="friend.id" :friend="friends[0]"></friend-contact>
+        <friend-contact v-cloak 
+            v-for="friend in friends" :key="friend.id"
+            @set-details="setDetails" 
+            :friend="friend"
+            :setClient="setClient"
+        ></friend-contact>
       </ul>
     </section>
   </template>
@@ -11,6 +17,7 @@
   export default {
     data() {
       return {
+        raw_html:"<h1>Fake Title</h1>",
         friends: [
           {
             id: "manuel",
@@ -27,5 +34,22 @@
         ],
       };
     },
+    methods:{
+        setDetails(friendId, newName, newPhone){
+            let friendToModify = this.friends.find(f => f.id === friendId);
+            friendToModify.name = newName;
+            friendToModify.phone = newPhone;
+        },
+        setClient(){
+            console.log("setClient")
+        }
+    }
   };
   </script>
+
+
+<style>
+[v-cloak] {
+    display: none;
+}
+</style>

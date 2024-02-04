@@ -12,9 +12,29 @@
       <input type="checkbox" v-model="isPurple"/> Purple
     </label>
 
-    <div class="circle" :class="{ purple : isPurple}">
-      Hi!
-    </div>
+    <div class="circle" :class="{ purple : !isPurple}">Hi!</div>
+
+    <div class="circle" :class="circleClasses">Hi!</div>
+
+    <input type="number" v-model="size" />
+    <input type="number" v-model="rotate" />
+    <button @click="rotateClockwiseBy15">Rotate Clockwise by 15</button>
+    <button @click="rotateCounterClockwiseBy15">Rotate Counter Clockwise by 15</button>
+
+    <select v-model="selectedColor">
+      <option value="">White</option>
+      <option value="text-black">Black</option>
+      <option value="text-orange">Orange</option>
+    </select>
+
+    <div class="circle" 
+      :class="[selectedColor, circleClasses]" 
+      :style="[
+        { width: size + 'px', height: size + 'px', lineHeight: size + 'px' }, 
+        { transform : 'rotate(' + rotate + 'deg)' }
+      ]"
+    >Hi!</div>
+
   </div>
 
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>

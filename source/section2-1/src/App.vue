@@ -1,5 +1,9 @@
 <template>
     <section>
+      <h2>Test Component</h2>
+      <test-component>
+        
+      </test-component>
       <h2>My Friends</h2>
       <p v-html="raw_html"></p>
       <ul>

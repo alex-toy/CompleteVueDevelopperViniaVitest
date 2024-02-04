@@ -7,7 +7,7 @@
       </div>
       <button @click="toggleDetails">Show Details</button>
       <ul v-if="detailsAreVisible">
-        <h3>MiddleName : {{ fullName() }}</h3>
+        <h3>MiddleName : {{ fullName }}</h3>
         <li>
           <strong>Phone:</strong> {{ friend.phone }}
         </li>
@@ -71,6 +71,11 @@
         url: "http://google.com"
       };
     },
+    computed:{
+      fullName(){
+        return `${this.friend.name} ${this.middleName} ${this.lastName}`;
+      },
+    },
     methods: {
       toggleDetails() {
         this.detailsAreVisible = !this.detailsAreVisible;
@@ -80,9 +85,6 @@
       },
       updateLastName(event){
         this.lastName = event.target.value;
-      },
-      fullName(){
-        return `${this.friend.name} ${this.middleName} ${this.lastName}`;
       },
       updateMiddleName(event){
         this.middleName = event.target.value;

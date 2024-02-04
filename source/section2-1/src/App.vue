@@ -22,14 +22,23 @@
           {
             id: "manuel",
             name: "Manuel Lorenz",
+            age: 23,
             phone: "0123 45678 90",
             email: "manuel@localhost.com",
           },
           {
             id: "julie",
             name: "Julie Jones",
+            age: 23,
             phone: "0987 654421 21",
             email: "julie@localhost.com",
+          },
+          {
+            id: "seb",
+            name: "seb Bourget",
+            age: 23,
+            phone: "654 7765 21",
+            email: "seb@bourget.com",
           },
         ],
       };

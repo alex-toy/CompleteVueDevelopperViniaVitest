@@ -13,17 +13,22 @@ let vm = Vue.createApp({
             this.rotateX = 0;
             this.rotateY = 0;
             this.rotateZ = 0;
+        },
+        async copy(){
+            let text = `transform:${this.box.transform}`;
+            navigator.clipboard.writeText(text);
+            alert("css copied")
         }
     },
     computed:{
         box(){
             return {
-                transform: `
+                transform : `
                     perspective(${this.perspective}px) 
                     rotateX(${this.rotateX}deg)
                     rotateY(${this.rotateY}deg)
                     rotateZ(${this.rotateZ}deg)
-                `,
+                `
             };
         }
     }

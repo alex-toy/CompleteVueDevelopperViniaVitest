@@ -18,6 +18,7 @@
 ### Create and run project
 ```
 npm create vue@latest
+npm init vue@latest
 npm i
 npm run dev
 ```

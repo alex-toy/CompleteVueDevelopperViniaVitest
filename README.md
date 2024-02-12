@@ -22,5 +22,12 @@ npm i
 npm run dev
 ```
 
-
 <img src="/pictures/init.png" title="architecture"  width="900">
+
+### Implement Vite
+```
+npm create vite@latest
+cd project_name
+npm i
+npm run dev
+```
